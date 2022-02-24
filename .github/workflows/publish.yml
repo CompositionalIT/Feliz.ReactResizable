@@ -21,10 +21,10 @@ jobs:
       run: dotnet tool restore
     - name: Restore dependencies
       run: dotnet restore
-      working-directory: ./fable/Feliz.ReactResizable
+      working-directory: fable/Feliz.ReactResizable
     - name: Build
       run: dotnet build --configuration Release --no-restore
-      working-directory: ./fable/Feliz.ReactResizable
+      working-directory: fable/Feliz.ReactResizable
     - name: Publish
       uses: brandedoutcast/publish-nuget@v2.5.2
       with:
