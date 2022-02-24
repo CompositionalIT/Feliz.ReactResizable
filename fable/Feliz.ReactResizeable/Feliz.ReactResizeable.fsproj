@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <WarnOn>3390;$(WarnOn)</WarnOn>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>0.0.1</Version>
+    <Company>Compositional IT</Company>
+    <Product>Feliz.ReactResizeable</Product>
+    <Authors>Compositional IT</Authors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="paket.references" />
+    <Compile Include="Feliz.ReactResizeable.fs" />
+  </ItemGroup>
+  <Import Project="..\..\.paket\Paket.Restore.targets" />
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="*.fsproj; **\*.fs; **\*.fsi" PackagePath="fable\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <NpmDependencies>
+      <NpmPackage Name="react-resizable" Version="gte 3.0.4 lt 4.0.0" ResolutionStrategy="Max" />
+    </NpmDependencies>
+    <RepositoryUrl>https://github.com/CompositionalIT/Feliz.ReactResizable</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/CompositionalIT/Feliz.ReactResizable</PackageProjectUrl>
+  </PropertyGroup>
+
+</Project>
